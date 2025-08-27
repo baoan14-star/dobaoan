@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DH | Chatbot AI Tư Vấn Đại Học</title>
+    <title>C3 | Chatbot AI Tư Vấn Cấp 3</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -233,7 +233,7 @@
         <div class="flex-1 flex flex-col h-full overflow-hidden">
 
             <header class="p-4 border-b border-gray-700 bg-dark-bg">
-                <h1 class="text-xl font-semibold text-left">DH | Chatbot AI Tư Vấn Đại Học</h1>
+                <h1 class="text-xl font-semibold text-left">C3 | Chatbot AI Tư Vấn Cấp 3</h1>
             </header>
             
 
@@ -271,21 +271,21 @@
 
     <script>
 const literaryKeywords = [
-    "đại học", "ngành", "trường", "tuyển sinh", "điểm chuẩn", "học bổng",
-    "kỳ thi", "khối", "môn", "nguyện vọng", "thủ tục", "hồ sơ", "học phí",
-    "sinh viên", "chương trình học", "cơ hội việc làm", "kỹ năng", "kiến thức",
-    "tư vấn", "hướng nghiệp", "chọn ngành", "chọn trường", "yêu cầu", "điều kiện",
+    "cấp 3", "trung học", "phổ thông", "lớp 10", "lớp 11", "lớp 12",
+    "tổ hợp môn", "chọn môn", "chọn ngành", "định hướng", "học tập",
+    "thi cử", "tốt nghiệp", "đại học", "cao đẳng", "nghề nghiệp",
+    "trường chuyên", "trường điểm", "học sinh", "giáo viên", "môn học",
+    "toán", "văn", "anh", "lý", "hóa", "sinh", "sử", "địa", "gdcd",
     "chào", "là gì", "là ai", "cần gì", "làm sao", "ở đâu", "bao nhiêu", "khi nào",
-    "cách", "hệ đào tạo", "bằng cấp", "chất lượng", "ranking", "quốc tế",
-    "trao đổi sinh viên", "thực tập", "nghiên cứu", "câu lạc bộ", "hoạt động ngoại khóa",
-    "định hướng", "tương lai", "phát triển", "môi trường học tập", "giảng viên",
-    "cơ sở vật chất", "chuyên ngành", "đào tạo", "thi cử", "ôn thi", "lộ trình",
-    "ngành hot", "xu hướng", "thị trường lao động", "thông tin", "tìm hiểu",
-    "phỏng vấn", "kinh nghiệm", "lời khuyên", "hỗ trợ", "giúp đỡ", "đăng ký",
-    "xét tuyển", "ưu tiên", "chính sách", "quy định", "văn bằng", "thạc sĩ", "tiến sĩ",
-    "du học", "liên kết quốc tế", "tiếng Anh", "ngoại ngữ", "kỹ năng mềm", "tự học",
-    "mục tiêu", "khát vọng", "đam mê", "sở thích", "khả năng", "điểm mạnh", "điểm yếu",
-    "tâm lý", "stress", "áp lực", "cân bằng", "sức khỏe", "tinh thần", "phát triển bản thân"
+    "cách", "học bài", "ôn thi", "thi thử", "điểm số", "học lực",
+    "khối a", "khối b", "khối c", "khối d", "tổ hợp", "xét tuyển",
+    "nguyện vọng", "hồ sơ", "thủ tục", "tuyển sinh", "điểm chuẩn",
+    "trắc nghiệm", "tự luận", "bài tập", "dự án", "hoạt động", "ngoại khóa",
+    "học nhóm", "tự học", "phương pháp", "kỹ năng", "quản lý thời gian",
+    "áp lực", "căng thẳng", "tâm lý", "động lực", "mục tiêu", "tương lai",
+    "nghề nghiệp", "ước mơ", "đam mê", "sở thích", "năng khiếu", "thiên hướng",
+    "tư vấn", "hướng nghiệp", "tâm sự", "chia sẻ", "giúp đỡ", "hỗ trợ",
+    "thời khóa biểu", "lịch học", "lịch thi", "kế hoạch", "mục tiêu học tập"
 ];
 
 function isLiteraryQuestion(question) {
@@ -302,7 +302,7 @@ function isLiteraryQuestion(question) {
     if (!isLiteraryQuestion(userInput)) {
         return {
             success: false,
-            message: "Xin lỗi, tôi chỉ trả lời chuyên về các câu hỏi liên quan đến định hướng Đại học, bạn có câu hỏi nào khác không?"
+            message: "Xin lỗi, tôi chỉ trả lời chuyên về các câu hỏi liên quan đến học tập cấp 3, bạn có câu hỏi nào khác không?"
         };
     }
     try {
@@ -311,7 +311,7 @@ function isLiteraryQuestion(question) {
     } catch (error) {
         console.error("API Error:", error);
         if (error.message.includes("không thuộc chủ đề")) {
-            addMessageToUI("assistant", "Xin lỗi, tôi chỉ trả lời chuyên về các câu hỏi liên quan đến Đại Học, bạn có câu hỏi nào liên quan đến Đại Học mà muốn hỏi tôi không?");
+            addMessageToUI("assistant", "Xin lỗi, tôi chỉ trả lời chuyên về các câu hỏi liên quan đến học tập cấp 3, bạn có câu hỏi nào liên quan đến cấp 3 mà muốn hỏi tôi không?");
         } else {
             throw new Error("Lỗi kết nối 221!");
         }
@@ -323,11 +323,48 @@ function isLiteraryQuestion(question) {
    if (!isLiteraryQuestion(userInput)) {
         return {
             success: false,
-            message: "Xin lỗi, tôi chỉ trả lời chuyên về các câu hỏi liên quan đến Đại Học, bạn có câu hỏi nào liên quan đến Đại Học mà muốn hỏi tôi không?"
+            message: "Xin lỗi, tôi chỉ trả lời chuyên về các câu hỏi liên quan đến học tập cấp 3, bạn có câu hỏi nào liên quan đến cấp 3 mà muốn hỏi tôi không?"
         };
     }
                 await new Promise(resolve => setTimeout(resolve, 500 + Math.random() * 1000));
                 
+                // Tạo phản hồi mẫu cho chatbot cấp 3
+                let enhancedResponse = "";
+                
+                if (userInput.toLowerCase().includes("chào")) {
+                    enhancedResponse = "Xin chào! Tôi là Chatbot AI Tư vấn Cấp 3. Tôi có thể giúp bạn với các vấn đề về học tập, định hướng, chọn môn, chọn ngành và nhiều thứ khác liên quan đến cấp 3. Bạn cần hỗ trợ gì?";
+                } else if (userInput.toLowerCase().includes("tổ hợp môn") || userInput.toLowerCase().includes("chọn môn")) {
+                    enhancedResponse = "Việc chọn tổ hợp môn học ở cấp 3 rất quan trọng vì nó ảnh hưởng đến định hướng nghề nghiệp tương lai của bạn. Một số tổ hợp phổ biến:\n\n" +
+                    "• Khối A (Toán, Lý, Hóa): Phù hợp với các ngành kỹ thuật, công nghệ, kinh tế\n" +
+                    "• Khối B (Toán, Hóa, Sinh): Phù hợp với các ngành y dược, nông lâm, sinh học\n" +
+                    "• Khối C (Văn, Sử, Địa): Phù hợp với các ngành xã hội, luật, báo chí\n" +
+                    "• Khối D (Toán, Văn, Anh): Phù hợp với các ngành ngoại ngữ, kinh tế, du lịch\n\n" +
+                    "Bạn có thể chia sẻ thêm về sở thích và điểm mạnh của mình để tôi tư vấn cụ thể hơn không?";
+                } else if (userInput.toLowerCase().includes("ôn thi") || userInput.toLowerCase().includes("học bài")) {
+                    enhancedResponse = "Để ôn thi hiệu quả, bạn có thể áp dụng các phương pháp sau:\n\n" +
+                    "1. **Lập kế hoạch học tập**: Chia nhỏ nội dung cần học theo từng ngày, đặt mục tiêu rõ ràng\n" +
+                    "2. **Học chủ động**: Tóm tắt kiến thức bằng sơ đồ tư duy, tự đặt câu hỏi và trả lời\n" +
+                    "3. **Luyện đề thường xuyên**: Làm các đề thi năm trước để làm quen với cấu trúc đề\n" +
+                    "4. **Nghỉ ngơi hợp lý**: Học 45-50 phút thì nghỉ 10-15 phút để não bộ ghi nhớ tốt hơn\n" +
+                    "5. **Ôn tập đều các môn**: Đừng tập trung quá vào một môn mà bỏ bê môn khác\n\n" +
+                    "Bạn đang gặp khó khăn với môn học nào? Tôi có thể gợi ý phương pháp học cụ thể.";
+                } else if (userInput.toLowerCase().includes("áp lực") || userInput.toLowerCase().includes("căng thẳng")) {
+                    enhancedResponse = "Áp lực học tập là điều rất bình thường với học sinh cấp 3. Dưới đây là một số cách giảm căng thẳng:\n\n" +
+                    "• **Chia sẻ với người thân**: Nói chuyện với bố mẹ, thầy cô hoặc bạn bè về những khó khăn bạn gặp phải\n" +
+                    "• **Tập thể dục đều đặn**: Vận động giúp giải phóng endorphin - hormone hạnh phúc\n" +
+                    "• **Ngủ đủ giấc**: Học sinh cấp 3 cần ngủ 7-9 tiếng mỗi đêm để não bộ hoạt động tốt\n" +
+                    "• **Học cách chấp nhận**: Không ai hoàn hảo, đừng tự tạo áp lực phải đạt điểm số tuyệt đối\n" +
+                    "• **Tìm sở thích giải trí**: Nghe nhạc, đọc sách, vẽ tranh... giúp thư giãn hiệu quả\n\n" +
+                    "Nếu cảm thấy quá tải, đừng ngần ngại tìm đến chuyên gia tâm lý học đường nhé!";
+                } else {
+                    enhancedResponse = "Cảm ơn bạn đã chia sẻ câu hỏi về học tập cấp 3. Là một AI chuyên về tư vấn giáo dục, tôi có thể giúp bạn với nhiều chủ đề như:\n\n" +
+                    "• Tư vấn chọn tổ hợp môn, định hướng ngành nghề\n" +
+                    "• Phương pháp học tập hiệu quả cho từng môn học\n" +
+                    "• Kỹ năng quản lý thời gian và giảm căng thẳng\n" +
+                    "• Chuẩn bị cho kỳ thi tốt nghiệp THPT\n" +
+                    "• Định hướng nghề nghiệp tương lai\n\n" +
+                    "Bạn có thể chia sẻ cụ thể hơn về vấn đề bạn đang gặp phải không?";
+                }
 
                 return {
                     success: true,
@@ -423,7 +460,7 @@ function setupEventListeners() {
     if (!userMessage || isSending) return;
 
     if (!isLiteraryQuestion(userMessage)) {
-        addMessageToUI("assistant", "Xin lỗi, tôi chỉ trả lời chuyên về các câu hỏi liên quan đến Đại Học, bạn có câu hỏi nào liên quan đến Đại Học mà muốn hỏi tôi không?");
+        addMessageToUI("assistant", "Xin lỗi, tôi chỉ trả lời chuyên về các câu hỏi liên quan đến học tập cấp 3, bạn có câu hỏi nào liên quan đến cấp 3 mà muốn hỏi tôi không?");
         messageInput.value = "";
         autoResizeTextarea();
         return;
@@ -443,7 +480,7 @@ function setupEventListeners() {
     addMessageToUI("user", userMessage);
     const greetings = ["chào", "hello"];
 if (greetings.some(greet => userMessage.toLowerCase().includes(greet))) {
-    const greetingResponse = "Xin chào, tôi là AI Đại Học được tạo ra bởi Lê Nguyễn Ngọc Thiệu đến từ trường THPT Số II Mộ Đức. Tôi có thể giúp gì cho bạn về Đại Học ngay bây giờ?";
+    const greetingResponse = "Xin chào, tôi là AI Tư vấn Cấp 3. Tôi có thể giúp gì cho bạn về học tập cấp 3 ngay bây giờ?";
     displayTypingMessage(greetingResponse, () => {
         if (!isStopped) {
             currentChat.messages.push({ 
@@ -778,7 +815,7 @@ if (greetings.some(greet => userMessage.toLowerCase().includes(greet))) {
 
 
         function loadChats() {
-            const storedChats = localStorage.getItem('DH-chats');
+            const storedChats = localStorage.getItem('C3-chats');
             if (storedChats) {
                 const now = Date.now();
                 const THIRTY_DAYS = 30 * 24 * 60 * 60 * 1000;
@@ -802,7 +839,7 @@ if (greetings.some(greet => userMessage.toLowerCase().includes(greet))) {
                 return now - chatTime < THIRTY_DAYS;
             });
 
-            localStorage.setItem('DH-chats', JSON.stringify(chats));
+            localStorage.setItem('C3-chats', JSON.stringify(chats));
         }
 
 
